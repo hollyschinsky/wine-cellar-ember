@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wine Cellar - Ember</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+    <body>
+        <script type="text/x-handlebars" data-template-name="application">
+            {{outlet}}
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="index">
+            {{template "header"}}
+            {{template "home"}}
+            {{template "footer"}}
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="wines">
+            {{template "header"}}
+            {{template "wines-list"}}
+            {{template "footer"}}
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="wine">
+            {{template "header"}}
+            {{template "wine-edit"}}
+            {{template "footer"}}
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="add">
+            {{template "header"}}
+            {{template "wine-new"}}
+            {{template "footer"}}
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="about">
+            {{template "header"}}
+            {{template "about-app"}}
+            {{template "footer"}}
+        </script>
+
+        <!-- TODO - Fix this to show? -->
+        <!-- goes with wine edit -->
+        <div class="row-fluid status-bar">
+            <div class="span12">
+                <div class="alert alert-success" style="display: none">
+                    <b>Success!</b> Wine saved successfully
+                </div>
+            </div>
+        </div>
+
+      <script src="http://use.edgefonts.net/andika.js"></script>
+      <script src="http://use.edgefonts.net/arvo.js"></script>
+
+      <script src="js/libs/jquery-1.9.1.js"></script>
+      <script src="js/libs/handlebars-1.0.0-rc.3.js"></script>
+      <script src="js/libs/ember-1.0.0-rc.2.js"></script>
+      <script src="js/libs/ember-data.js"></script>
+      <script src="js/handlebars.js"></script>
+      <script src="js/libs/bootstrap.min.js"></script>
+      <script src="js/app.js"></script>
+
+    </body>
+</html>
