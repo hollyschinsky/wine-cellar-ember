@@ -93,7 +93,7 @@ Ember.TEMPLATES['wine-edit'] = Ember.Handlebars.compile('' +
     '               <div class="control-group">'+
     '                   <label class="control-label">Name:</label>'+
     '                   <div class="controls">'+
-    '                       <p>{{view Ember.TextField valueBinding="name"}}</p>'+
+    '                       <p>{{view App.TextField valueBinding="name"}}</p>'+
     '                   </div>'+
     '               </div>'+
     '               <div class="control-group">'+
@@ -156,7 +156,7 @@ Ember.TEMPLATES['wine-new'] = Ember.Handlebars.compile('' +
     '               <div class="control-group">'+
     '                   <label class="control-label">Name:</label>'+
     '                   <div class="controls">'+
-    '                       <p>{{view Ember.TextField valueBinding="name"}}</p>'+
+    '                       <p>{{view App.TextField valueBinding="name" required="true"}}</p>'+
     '                   </div>'+
     '               </div>'+
     '               <div class="control-group">'+
