@@ -1,6 +1,7 @@
 App.WineView = Ember.View.extend({
-    templateName: 'wine',
+    templateName: 'wine-edit',
     didInsertElement: function() {
         this.$('input:first').focus();
     }
+
 });

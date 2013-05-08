@@ -1,4 +1,4 @@
-App.TextField = Ember.TextField.extend({
+App.RequiredTextField = Ember.TextField.extend({
     attributeBindings:  ['required'],
     required:   null
 });
