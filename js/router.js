@@ -9,6 +9,18 @@ App.Router.map(function() {
 });
 
 
+// Add a Wine Route
+App.AddRoute = Ember.Route.extend({
+    model: function() {
+        // The new record needs to be created in the controller.
+        return null;
+    },
+
+    setupController: function(controller) {
+        controller.startEditing();
+    }
+});
+
 // Return all wines as the default model when the '/wines' route is requested...
 App.WinesRoute = Ember.Route.extend({
     model: function() {
@@ -42,15 +54,5 @@ App.WineRoute = Ember.Route.extend({
     }
 });
 
-// Add a Wine Route
-App.AddRoute = Ember.Route.extend({
-    model: function() {
-        // The new record needs to be created in the controller.
-        return null;
-    },
 
-    setupController: function(controller) {
-        controller.startEditing();
-    }
-});
 
