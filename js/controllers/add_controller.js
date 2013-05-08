@@ -23,5 +23,13 @@ App.AddController = Ember.ObjectController.extend({
     cancel: function() {
         this.stopEditing();
         this.transitionToRoute('wines');
-    }
+    },
+
+    // Use a computed property to add to the path or set the generic for picture as needed
+    newPicture: function() {
+        var picture = this.get('picture');
+        if (picture)
+            return "pics/"+picture;
+        else return "pics/generic.jpg"
+    }.property('newPicture')
 });

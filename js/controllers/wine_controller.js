@@ -1,5 +1,13 @@
-App.WineController = Em.ObjectController.extend({
+App.WineController = Ember.ObjectController.extend({
     needs: ['wine'],
+
+    // Use a computed property to add to the path or set the generic for picture as needed
+    newPicture: function() {
+        var picture = this.get('picture');
+        if (picture)
+            return "pics/"+picture;
+        else return "pics/generic.jpg"
+    }.property('newPicture'),
 
     startEditing: function() {
         // add the wine to a *local* transaction
@@ -35,4 +43,5 @@ App.WineController = Em.ObjectController.extend({
         this.transaction.commit();
         this.transitionToRoute('wines');
     }
+
 });
